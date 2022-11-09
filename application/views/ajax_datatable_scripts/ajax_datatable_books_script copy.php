@@ -17,12 +17,12 @@ var datatable_book_global = [];
 			"ajax": '<?php echo base_url();?>books_ajax_fetchdata',
 			"columns": [
 					{ "render": function() {return dummy_id++} },
-					{ "data": "title" },
-					{ "data": "isbn" }, // CHANGE TO ISBN
 					{ "data": "author" },
-					{ "data": "publisher"}, // CHAGNE TO PUBLISHER
-					{ "data": "date_of_publication" }, 
-					{ "data": "category" }, // CHANGE TO CATEGORY
+					{ "data": "name" },
+					{ "data": "date_of_publication" },
+					{ "data": "description"},
+					{ "data": "created_at" },
+					{ "data": "" },
 					{ "render": function ( data, type, row, meta ) {
 						//NOT YET WORKING
 						var ajax_see = `<a class="btn btn-link" href=""><i class="bi bi-eye-fill"></a>`

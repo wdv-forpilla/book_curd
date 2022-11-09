@@ -32,11 +32,12 @@
 				<thead>
 					<tr>
 						<th scope="col"><!-- THIS SPACE FOR COUNTING_ID -->#</th>
+						<th scope="col">Title</th>
+						<th scope="col">ISBN</th>
 						<th scope="col">Author</th>
-						<th scope="col">Name Of The Book</th>
-						<th scope="col">Date Of Publication</th>
-						<th scope="col">Description</th>
-						<th scope="col"><!-- THIS SPACE FOR CREATED_AT -->Date Posted</th>
+						<th scope="col">Publisher</th>
+						<th scope="col"><!-- THIS SPACE FOR CREATED_AT -->Year Published</th>
+						<th scope="col">Category</th>
 						<th scope="col"><!-- THIS SPACE FOR BUTTON(s) -->View</th>
 						<th scope="col"><!-- THIS SPACE FOR BUTTON(s) -->Edit</th>
 						<th scope="col"><!-- THIS SPACE FOR BUTTON(s) -->Delete</th>
@@ -115,19 +116,24 @@
 					<table class="table">
 					<thead>
 						<tr>
-							<th scope="col">Author</th>
-							<th scope="col">Book</th>
-							<th scope="col">Date Of Publish</th>
-							<th scope="col">Description</th>
+						<th scope="col" class="w-25">Title</th>
+						<th scope="col">ISBN</th>
+						<th scope="col" class="col-lg-2">Author</th>
+						<th scope="col">Publisher</th>
+						<th scope="col">Year Published</th>
+						<th scope="col">Category</th>
+						<th scope="col"></th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
+							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="name"  id="edit_title"></td>
+							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="name"  id="edit_isbn"></td>
 							<td scope="row"><input type="text"class="form-control" aria-label="First name" style="height: 45px" name="author" id="edit_author"></th>
-							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="name"  id="edit_name"></td>
-							<td><input type="date"class="form-control" max="<?php echo date("Y-m-d"); ?>" style="height: 45px" name="date_of_publication" id="edit_date_of_publication"></td>
-							<td><textarea cols="30" rows="7" class="form-control" name="description"  id="edit_description"></textarea></td>
+							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="name"  id="edit_publisher"></td>
+							<td><input type="text"class="form-control" max="" style="height: 45px" name="date_of_publication" id="edit_date_of_publication"></td>
+							<td scope="row"><input type="text"class="form-control" aria-label="First name" style="height: 45px" name="category" id="edit_category"></th>
 							<!-- HIDDEN ID -->
 							<td><input type="hidden" name="id" id=""></td>
 						</tr>

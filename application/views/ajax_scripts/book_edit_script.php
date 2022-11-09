@@ -14,20 +14,26 @@
 		}).get();
 
 			console.log(data);
-			$('#edit_author').val(data[1]);
-			$('#edit_name').val(data[2]);
-			$('#edit_date_of_publication').val(data[3]);
-			$('#edit_description').val(data[4]);
+
+			$('#edit_title').val(data[1]);
+			$('#edit_isbn').val(data[2]);
+			$('#edit_author').val(data[3]);
+			$('#edit_publisher').val(data[4]);
+			$('#edit_date_of_publication').val(data[5]);
+			$('#edit_category').val(data[6]);
 
 		//EDIT/UPDATE WINDOW
 		$('#edit_ajax').on('click', function() {
 			//DATA GET
-			var edit_name = $("#edit_name").val();
-			var edit_author = $("#edit_author").val();
-			var edit_date_of_publication = $("#edit_date_of_publication").val();
-			var edit_description = $("#edit_description").val();
 
-			if(edit_name == '' || edit_author == '' || edit_date_of_publication == '' || edit_description == '') {
+			var edit_val_title = $('#edit_title').val();
+			var edit_val_isbn = $('#edit_isbn').val();
+			var edit_val_author = $('#edit_author').val();
+			var edit_val_publisher = $('#edit_publisher').val();
+			var edit_val_publication = $('#edit_date_of_publication').val();
+			var edit_val_category = $('#edit_category').val();
+
+			if(edit_val_title == '' || edit_val_isbn == '' || edit_val_author == '' || edit_val_publisher == '' || edit_val_publication == '' || edit_val_category == '') {
 				console.log('EMPTY FIELDS ARE PRESENT');
 			} else {
 				$.ajax({
@@ -35,10 +41,12 @@
 				type: 'post',
 				data: {
 					id: ajax_del_id,
-					author: edit_author,
-					name: edit_name,					
-					date_of_publication: edit_date_of_publication,
-					description: edit_description 
+					title: edit_val_title,
+					isbn: edit_val_isbn,					
+					author: edit_val_author,
+					publisher: edit_val_publisher,
+					date_of_publication: edit_val_publication,
+					category: edit_val_category
 				},
 				dataType: 'text',
 				success: function(data) {
