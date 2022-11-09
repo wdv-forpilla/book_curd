@@ -11,9 +11,7 @@
 	<div class="d-flex justify-content-between pb-4">
 		<a href="<?php echo base_url(); ?>posts/create" class="btn btn-outline-light">Add your Favorite Book</a>
 		<div>
-			<a href="<?php base_url();?>view_2" class="btn btn-link"><i class="bi bi-door-open"></i> Go to Author's Page</a>
-			<!-- NEW BUTTON FOR ENCHANCEMENT -->
-			<button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#add_modal_w">
+			<button type="button" class="btn btn-outline-secondary" id="add_modal_show" >
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
 					<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
 				</svg>
@@ -57,12 +55,11 @@
 <!-------------------------------------------------------------------------------- 
 ------------------------------ MODAL: SECTION ONLY, ------------------------------
  -------------------------------------------------------------------------------->
-<!-- NEW BUTTON FOR ENHANCEMENT MODAL -->
-<div class="modal fade" id="add_modal_w" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="add_modal_w" tabindex="1" aria-labelledby="" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Add Your Favorite Book To the List</h5>
+				<h5 class="modal-title" id="">Add Your Favorite Book To the List</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
@@ -107,13 +104,12 @@
 		</div>
 	</div>
 </div>
-
 <!-- MODAL EDIT -->
-<div class="modal fade" id="edit_modal_w" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit_modal_w" tabindex="-1" aria-labelledby="" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Update Your List</h5>
+				<h5 class="modal-title" id="">Update Your List</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
@@ -133,10 +129,10 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="name"  id="edit_title"></td>
-							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="name"  id="edit_isbn"></td>
+							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="title"  id="edit_title"></td>
+							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="isbn"  id="edit_isbn"></td>
 							<td scope="row"><input type="text"class="form-control" aria-label="First name" style="height: 45px" name="author" id="edit_author"></th>
-							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="name"  id="edit_publisher"></td>
+							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="publisher"  id="edit_publisher"></td>
 							<td><input type="text"class="form-control" max="" style="height: 45px" name="date_of_publication" id="edit_date_of_publication"></td>
 							<td scope="row"><input type="text"class="form-control" aria-label="First name" style="height: 45px" name="category" id="edit_category"></th>
 							<!-- HIDDEN ID -->
@@ -160,13 +156,12 @@
 	</div>
 </div>
 
-
 <!-- DELETE MODAL -->
-<div class="modal fade" id="delete_modal_w" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="delete_modal_w" tabindex="-1" aria-labelledby="" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete?</h5>
+				<h5 class="modal-title" id="">Are you sure you want to delete?</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 		<div class="modal-body">
@@ -196,6 +191,3 @@
 		$('.books_list_content').fadeIn();
 	});
 </script>
-
-<!-- REMINDER MODAL -->
-<?php include 'application/views/scripts/reminder_script.php';?>

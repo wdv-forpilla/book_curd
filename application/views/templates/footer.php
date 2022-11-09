@@ -29,15 +29,8 @@
 	<?php include 'application/views/ajax_scripts/book_create_script.php'; ?>
 	<?php include 'application/views/ajax_scripts/book_edit_script.php';?>
 	<?php include 'application/views/ajax_scripts/book_delete_script.php';?>
-
-	<!-- SCRIPTS AUTHOR -->
-	<?php include 'application/views/ajax_scripts/author_create_script.php'; ?>
-	<?php include 'application/views/ajax_scripts/author_delete_script.php';?>
-	<?php include 'application/views/ajax_scripts/author_edit_script.php';?>
-	
 	<!-- AJAX: DataTable -->
 	<?php include 'application/views/ajax_datatable_scripts/ajax_datatable_books_script.php';?>
-	<?php include 'application/views/ajax_datatable_scripts/ajax_datatable_authors_script.php';?>
 
 	</body>
 </html>

@@ -1,11 +1,11 @@
-<script type="application/javascript">
+<script defer type="application/javascript">
 	$(document).on('click', '#edit_ajax_popup', function() {
 		//MODAL POPUP
 		$('#edit_modal_w').modal('show');
+		$('#add_modal_w').modal('hide');
+		$('#delete_modal_w').modal('hide');
 
 		var ajax_del_id = $(this).attr('value');
-		//AJAX_DISPLAY ID
-		console.log(ajax_del_id);
 
 		$tr = $(this).closest('tr');
 

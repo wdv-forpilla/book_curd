@@ -1,7 +1,9 @@
-<script defer="defer" type="application/javascript">
+<script defer type="application/javascript">
 	$(document).on('click', '#delete_ajax_popup' ,function() {
 		//MODAL POPUP
 		$('#delete_modal_w').modal('show');
+		$('#add_modal_w').modal('hide');
+		$('#edit_modal_w').modal('hide');
 
 		var ajax_del_id = $(this).attr('value');
 			$('#delete_ajax').on('click', function() {
