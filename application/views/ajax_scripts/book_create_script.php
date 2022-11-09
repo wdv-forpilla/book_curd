@@ -2,22 +2,27 @@
 	$(document).on('click', '#ajax_create', function() {	
 		
 		//AJAX SUBMITION FORM
-		var add_name = $("#add_name").val();
-		var add_author = $("#add_author").val();
-		var add_date_of_publication = $("#add_date_of_publication").val();
-		var add_description = $("#add_description").val();
 
-		if(add_name == '' || add_author == '' || add_date_of_publication == '' || add_description == '') {
+		var add_title = $("#add_title").val();
+		var add_isbn = $("#add_isbn").val();
+		var add_author = $("#add_author").val();
+		var add_publisher = $("#add_publisher").val();
+		var add_year_published = $("#add_year_published").val();
+		var add_category = $("#add_category").val();
+
+		if(add_title == '' || add_isbn == '' || add_author == '' || add_publisher == ''  || add_year_published == ''  || add_category == '') {
 			alert('Empty fields are present');
 		} else {
 			$.ajax({
 				url: '<?php echo base_url();?>books_ajax_create',
 				type: 'post',
 				data: {
-					name: add_name,
+					title: add_title,
+					isbn: add_isbn,
 					author: add_author,
-					date_of_publication: add_date_of_publication,
-					description: add_description
+					publisher: add_publisher,
+					date_of_publication: add_year_published,
+					category: add_category
 				},
 				dataType: 'text',
 				success: function(data) {

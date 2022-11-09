@@ -70,28 +70,60 @@
 			<?php echo form_open('', 'id="add_form"'); ?>
 				<!-- ADD TO THE LIST FORM -->
 				<div class="mb-3">
-					<label for="exampleInputEmail1" class="form-label">Title</label>
-					<input type="text" class="form-control" id="add_title"  name="add_title">
+					<label for="exampleInputEmail1" class="form-label">Email address</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">ISBN</label>
-					<input type="text" class="form-control" id="add_isbn" name="add_isbn">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="text" class="form-control" id="exampleInputPassword1">
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputEmail1" class="form-label">Author</label>
-					<input type="text" class="form-control" id="add_author" name="add_author">
+					<label for="exampleInputEmail1" class="form-label">Email address</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Publisher</label>
-					<input type="text" class="form-control" id="add_publisher" name="add_publisher">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="text" class="form-control" id="exampleInputPassword1">
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputEmail1" class="form-label">Year Published</label>
-					<input type="text" class="form-control" id="add_year_published" name="add_year_published">
+					<label for="exampleInputEmail1" class="form-label">Email address</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Category</label>
-					<input type="text" class="form-control" id="add_category" name="add_category">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="text" class="form-control" id="exampleInputPassword1">
+				</div>
+				<div class="mb-3">
+					<label for="exampleInputEmail1" class="form-label">Email address</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+				</div>
+				<div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="text" class="form-control" id="exampleInputPassword1">
+				</div>
+
+				<div class="row mb-3">
+					<div class="col">
+						<label for="" class="mb-1">Name Of The Book</label>
+						<input type="text" name="name" id="add_name" class="form-control" aria-label="First name" style="height: 45px">
+					</div>
+					<div class="col">
+					<label for="" class="mb-1">Author</label>
+						<input type="text" name="author" id="add_author" class="form-control" aria-label="Last name" style="height: 45px">
+					</div>
+				</div>
+				<div class="form-group mb-3">
+					<label for="" class="mb-1">Description</label>
+					<textarea name="description" id="add_description" cols="30" rows="10" class="form-control"></textarea>
+				</div>
+				<div class="form-group mb-3">
+					<label for="" class="mb-1">Date of Publish</label>
+					<input type="date" name="date_of_publication" id="add_date_of_publication" class="form-control" max="<?php echo date("Y-m-d"); ?>" style="height: 45px">
+				</div>			
 				</div>
 				<div class="modal-footer d-flex justify-content-between">
 					<button type="button" class="btn btn-link" data-bs-dismiss="modal">Close</button>	
