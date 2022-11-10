@@ -1,9 +1,7 @@
-<script defer type="application/javascript">
+<script type="application/javascript">
 	$(document).on('click', '#edit_ajax_popup', function() {
 		//MODAL POPUP
 		$('#edit_modal_w').modal('show');
-		$('#add_modal_w').modal('hide');
-		$('#delete_modal_w').modal('hide');
 
 		var ajax_del_id = $(this).attr('value');
 
@@ -25,7 +23,6 @@
 		//EDIT/UPDATE WINDOW
 		$('#edit_ajax').on('click', function() {
 			//DATA GET
-
 			var edit_val_title = $('#edit_title').val();
 			var edit_val_isbn = $('#edit_isbn').val();
 			var edit_val_author = $('#edit_author').val();
@@ -37,28 +34,28 @@
 				console.log('EMPTY FIELDS ARE PRESENT');
 			} else {
 				$.ajax({
-				url: '<?php echo base_url();?>books_ajax_edit',
-				type: 'post',
-				data: {
-					id: ajax_del_id,
-					title: edit_val_title,
-					isbn: edit_val_isbn,					
-					author: edit_val_author,
-					publisher: edit_val_publisher,
-					date_of_publication: edit_val_publication,
-					category: edit_val_category
-				},
-				dataType: 'text',
-				success: function(data) {
-					console.log('EDIT_AJAX_SUCCESS');
-					//MODAL HIDE
-					$('#edit_modal_w').modal('hide');
-					datatable_book_global.ajax.reload();
-				},
-				error: function(data) {
-					console.log('EDIT_AJAX_FAILED');
-				}
-			});
+					url: '<?php echo base_url();?>books_ajax_edit',
+					type: 'post',
+					data: {
+						id: ajax_del_id,
+						title: edit_val_title,
+						isbn: edit_val_isbn,					
+						author: edit_val_author,
+						publisher: edit_val_publisher,
+						date_of_publication: edit_val_publication,
+						category: edit_val_category
+					},
+					dataType: 'text',
+					success: function(data) {
+						console.log('EDIT_AJAX_SUCCESS');
+						//MODAL HIDE
+						$('#edit_modal_w').modal('hide');
+						datatable_book_global.ajax.reload();
+					},
+					error: function(data) {
+						console.log('EDIT_AJAX_FAILED');
+					}
+				});
 			}
 		});
 	});

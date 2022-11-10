@@ -2,10 +2,9 @@
 	$(document).on('click', '#delete_ajax_popup' ,function() {
 		//MODAL POPUP
 		$('#delete_modal_w').modal('show');
-		$('#add_modal_w').modal('hide');
-		$('#edit_modal_w').modal('hide');
 
 		var ajax_del_id = $(this).attr('value');
+
 			$('#delete_ajax').on('click', function() {
 				$.ajax({
 					url: '<?php echo base_url()?>books_ajax_delete',

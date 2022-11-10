@@ -1,11 +1,6 @@
 <script defer type="application/javascript">
-	$(document).on('click', '#add_modal_show', function() {	
+	$(document).on('click', '#ajax_create', function() {	
 
-		$('#add_modal_w').modal('show');
-		$('#delete_modal_w').modal('hide');
-		$('#edit_modal_w').modal('hide');
-
-		$('#ajax_create').on('click', function() {
 			//AJAX SUBMITION FORM
 			var add_title = $("#add_title").val();
 			var add_isbn = $("#add_isbn").val();
@@ -42,7 +37,7 @@
 					}
 				});		
 			}
-		});		
+			
 	});	
 </script>
 

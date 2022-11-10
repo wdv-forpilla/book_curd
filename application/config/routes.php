@@ -66,12 +66,6 @@ $route['books_ajax_create'] = 'books/books_ajax_create';
 $route['books_ajax_edit'] = 'books/books_ajax_edit';
 $route['books_ajax_delete'] = 'books/books_ajax_delete';
 
-//NEW AUTHOR_AJAX CALLS
-$route['author_ajax_fetchdata'] = 'author/author_ajax_fetchdata';
-$route['author_ajax_create'] = 'author/author_ajax_create';
-$route['author_ajax_edit'] = 'author/author_ajax_edit';
-$route['author_ajax_delete'] = 'author/author_ajax_delete';
-
 $route['posts/(:any)'] = 'posts/edit/$1';
 $route['pages/(:any)'] = 'pages/index/$1';
 
