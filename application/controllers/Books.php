@@ -35,7 +35,6 @@
 
 		//EDIT or UPDATE DATA FROM DATABASE
 		public function books_ajax_edit() {
-			echo 'hello';
 			if($this->input->is_ajax_request()) {
 				$ajax_edit = $this->input->post();
 				if($this->book_model->book_db_edit($ajax_edit)) {

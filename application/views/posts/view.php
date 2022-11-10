@@ -133,12 +133,12 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="title"  id="edit_title"></td>
-							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="isbn"  id="edit_isbn"></td>
-							<td scope="row"><input type="text"class="form-control" aria-label="First name" style="height: 45px" name="author" id="edit_author"></th>
-							<td><input type="text"class="form-control" aria-label="Last name" style="height: 45px" name="publisher"  id="edit_publisher"></td>
+							<td><input type="text"class="form-control" aria-label="" style="height: 45px" name="title"  id="edit_title"></td>
+							<td><input type="text"class="form-control" aria-label="" style="height: 45px" name="isbn"  id="edit_isbn"></td>
+							<td scope="row"><input type="text"class="form-control" aria-label="" style="height: 45px" name="author" id="edit_author"></th>
+							<td><input type="text"class="form-control" aria-label="" style="height: 45px" name="publisher"  id="edit_publisher"></td>
 							<td><input type="text"class="form-control" max="" style="height: 45px" name="date_of_publication" id="edit_date_of_publication"></td>
-							<td scope="row"><input type="text"class="form-control" aria-label="First name" style="height: 45px" name="category" id="edit_category"></th>
+							<td scope="row"><input type="text"class="form-control" aria-label="" style="height: 45px" name="category" id="edit_category"></th>
 							<!-- HIDDEN ID -->
 							<td><input type="hidden" name="id" id=""></td>
 						</tr>

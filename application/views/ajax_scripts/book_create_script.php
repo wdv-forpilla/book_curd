@@ -1,4 +1,4 @@
-<script defer type="application/javascript">
+<script defer="defer" type="application/javascript">
 	$(document).on('click', '#ajax_create', function() {	
 
 			//AJAX SUBMITION FORM

@@ -43,7 +43,7 @@
 						author: edit_val_author,
 						publisher: edit_val_publisher,
 						date_of_publication: edit_val_publication,
-						category: edit_val_category
+						category: edit_val_category,
 					},
 					dataType: 'text',
 					success: function(data) {
@@ -52,8 +52,9 @@
 						$('#edit_modal_w').modal('hide');
 						datatable_book_global.ajax.reload();
 					},
-					error: function(data) {
-						console.log('EDIT_AJAX_FAILED');
+					error: function(data, textStatus ,errorThrown) {
+						console.log('EDIT_AJAX_FAILED: ', errorThrown);
+						console.log(textStatus);
 					}
 				});
 			}

@@ -19,7 +19,7 @@
 
 		public function book_db_edit($data) {
 			$this->db->where('id', $this->input->post('id'));
-			$this->db->set('updated_at', 'NOW()', FALSE);
+			$this->db->set('date_updated', 'NOW()', FALSE);
 			$query = $this->db->update('books', $data);
 			return $query;
 		}
